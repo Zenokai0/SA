@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         html += `
                             <a href="/product/${d.product_id}">
                                 <div class="product-card">
-                                    <img src="Images/${d.product_image}.jpg" alt="${d.product_image}">
+                                    <img src="images/${d.product_image}.jpg" alt="${d.product_image}">
                                     <h3>${d.product_name}</h3>
                                     <p>${d.price}</p>
                                 </div>
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 html += `
                                     <a href="/product/${d.product_id}">
                                         <div class="product-card">
-                                            <img src="Images/${d.product_image}.jpg" alt="${d.product_image}">
+                                            <img src="images/${d.product_image}.jpg" alt="${d.product_image}">
                                             <h3>${d.product_name}</h3>
                                             <p>${d.price}</p>
                                         </div>
