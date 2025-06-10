@@ -7,9 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Zando - Fashion Retail</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
 </head>
 
 <body>
@@ -65,16 +65,16 @@
             </div>
             @endauth
 
-            <div class="account-menu">
+            <!-- <div class="account-menu">
                 <button title="Notifications">🔔</button>
                 <button title="Add to Bag" class="cart" data-count="0">🛍️</button>
-            </div>
+            </div> -->
         </div>
     </header>
     <!-- login popup -->
     <div class="popup-bg"></div>
     <div class="popup">
-        <button class="close">X</button>
+        <button class="close" style="font-size: 24px;">&#215;</button>
         <div class="popup-nav">
             <button class="popup-nav-button nav-login">Login</button>
             <button class="popup-nav-button nav-reg">Register</button>
@@ -153,6 +153,7 @@
     <script src="{{ asset('js/cart_count.js') }}"></script>
     <script src="{{ asset('js/account_popup.js') }}"></script>
     <script src="{{ asset('js/search.js') }}"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
     <script src="{{ asset('js/loginout.js') }}"></script>
 </body>
 

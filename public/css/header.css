@@ -1,13 +1,15 @@
 /* Base styles for desktop */
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     font-family: 'Poppins';
-    background-color:#fbf0e9 ;
+    background-color: #fbf0e9;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -28,7 +30,8 @@ header {
     font-weight: bold;
     color: #0C0950;
 }
-.logo h1 a{
+
+.logo h1 a {
     text-decoration: none;
 }
 
@@ -36,11 +39,14 @@ header {
     display: flex;
     align-items: center;
 }
-.menu-left .dropdown p{
+
+.menu-left .dropdown p {
     margin-bottom: 0;
 }
 
-.menu-left a, .menu-left p, .dropdown > a {
+.menu-left a,
+.menu-left p,
+.dropdown>a {
     margin-right: 20px;
     text-decoration: none;
     color: #0C0950;
@@ -51,7 +57,9 @@ header {
     transition: color 0.3s ease;
 }
 
-.menu-left a:hover, .menu-left p:hover, .dropdown > a:hover {
+.menu-left a:hover,
+.menu-left p:hover,
+.dropdown>a:hover {
     color: #0C0950;
     cursor: pointer;
 }
@@ -87,7 +95,7 @@ header {
 
 .dropdown-content a:hover {
     text-decoration: underline;
-    transition:ease-in-out 200ms;
+    transition: ease-in-out 200ms;
 }
 
 .menu-right {
@@ -103,8 +111,9 @@ header {
     font-size: 14px;
 }
 
-.menu-right button, .menu-right a {
-    margin-left: 15px;
+.menu-right button,
+.menu-right a {
+    margin-left: 10px;
     background: none;
     border: none;
     font-size: 20px;
@@ -113,7 +122,8 @@ header {
     transition: color 0.3s ease;
 }
 
-.menu-right button:hover, .menu-right a:hover {
+.menu-right button:hover,
+.menu-right a:hover {
     color: #007bff;
 }
 
@@ -140,7 +150,7 @@ header {
 /* Hamburger and nav styles */
 .hamburger {
     display: none;
-    font-size: 2rem;
+    font-size: 20px;
     background: none;
     border: none;
     cursor: pointer;
@@ -156,7 +166,7 @@ header {
     position: absolute;
     right: 20px;
     top: 60px;
-    background-color:#fbf0e9 ;
+    background-color: #fbf0e9;
     padding: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -164,8 +174,141 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+.profile-dropdown {
+    list-style: none;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.profile-dropdown li,
+.profile-dropdown button {
+    padding: 10px 25px 10px 10px;
+}
+
+.profile-dropdown button {
+    font-size: 14px;
+    margin: 0;
+}
+
+.profile-dropdown button:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.dropdown-active {
+    display: block;
+}
+
+/* login/signup popup */
+html {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.popup-bg {
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    opacity: 0.7;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: 0;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    height: 70vh;
+    margin: auto auto;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    grid-template-rows: 30px 50px;
+    border-radius: 10px;
+    display: none;
+}
+
+.login-body,
+.register-body {
+    display: grid;
+    margin-top: 20px;
+}
+
+.login-body {
+    grid-template-rows: 30px 50px 30px 50px 70px;
+}
+
+.register-body {
+    grid-template-rows: 30px 50px 30px 50px 30px 50px 70px;
+}
+
+.hide {
+    display: none;
+}
+
+.login-body input,
+.register-body input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.register-body button,
+.login-body button {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+.close {
+    justify-self: end;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-nav {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid black;
+}
+
+.popup-nav-button {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.nav-active {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
 /* iPad size (max-width: 768px) */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    header{
+        /* position: fixed; */
+    }
     .hamburger {
         display: block;
         justify-content: center;
@@ -176,7 +319,7 @@ header {
         position: fixed;
         top: 0;
         left: -400px;
-        width: 30%;
+        width: 50%;
         height: 100vh;
         background-color: #FBE4D6;
         padding: 20px;
@@ -192,7 +335,9 @@ header {
         align-items: flex-start;
     }
 
-    .menu-left a, .dropdown > a {
+    .menu-left a,
+    .menu-left p,
+    .dropdown>a {
         margin: 10px 0;
         font-size: 18px;
         letter-spacing: 1px;
@@ -220,160 +365,26 @@ header {
         font-size: 16px;
         color: #418ad8;
     }
-    .menu-right .menu-right-btn {
-        display: none;
-    }
 
-    .menu-right .search-bars {
-        display: none;
+    .popup {
+        height: 85vh;
     }
 }
 
 /* Phone size (max-width: 480px) */
-@media screen and (max-width: 480px) {
-    .menu-right .menu-right-btn {
-        display: none;
-    }
+@media (max-width: 480px) {
 
-    .menu-right .search-bar,
-    .menu-right .account-btn {
-        display: none;
-    }
-
-    .menu-right input.search-bar {
-        width: 100px;
-    }
-
-    .account-menu {
-        transform: translateX(100%);
-    }
-
-    .account-btn:hover + .account-menu,
+    .account-btn:hover+.account-menu,
     .account-menu.active {
         display: flex;
         flex-direction: column;
         transform: translateX(0);
     }
 
-    .account-menu button {
-        margin: 10px 0;
-        font-size: 18px;
-    }
-
     .logo h1 {
         font-size: 20px;
     }
-}
-
-.profile-dropdown{
-    list-style: none;
-    position: absolute;
-    right: 20px;
-    top: 60px;
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    display: none;
-}
-.profile-dropdown li, .profile-dropdown button{
-    padding: 10px 25px 10px 10px;
-}
-.profile-dropdown button{
-    font-size: 14px;
-    margin: 0;
-}
-.profile-dropdown button:hover{
-    background-color: #ffffff;
-    cursor: pointer;
-}
-.dropdown-active{
-    display: block;
-}
-
-/* login/signup popup */
-html{
-    overflow-x: hidden;
-    position: relative;
-}
-.popup-bg{
-    position: absolute;
-    z-index: 10;
-    background-color: black;
-    opacity: 0.7;
-    width: 100vw;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    margin-top: 0;
-    display: none;
-}
-.popup{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 400px;
-    height: 70vh;
-    margin: auto auto;
-    z-index: 10;
-    background-color: white;
-    padding: 20px;
-    grid-template-rows: 30px 50px;
-    border-radius: 10px;
-    display: none;
-}
-.login-body, .register-body{
-    display: grid;
-    margin-top: 20px;
-}
-.login-body{
-    grid-template-rows: 30px 50px 30px 50px 70px;
-}
-.register-body{
-    grid-template-rows: 30px 50px 30px 50px 30px 50px 70px;
-}
-.hide{
-    display: none;
-}
-
-.login-body input,
-.register-body input{
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-bottom: 10px;
-}
-.register-body button,
-.login-body button{
-    margin-top: 20px;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
-}
-.close{
-    justify-self: end;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-.popup-nav{
-    display: flex;
-    gap: 20px;
-    border-bottom: 1px solid black;
-}
-.popup-nav-button{
-    border:none;
-    background-color: transparent;
-    font-size: 18px;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-.nav-active{
-    border-bottom: 2px solid black;
-    font-weight: bold;
+    .menu-right button{
+        font-size: 16px;
+    }
 }

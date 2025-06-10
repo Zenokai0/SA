@@ -60,3 +60,14 @@
 .search-result a{
     text-decoration: none;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar{
+        width: 100px;
+    }
+    .search-result {
+        grid-template-columns: 1fr;
+    }
+
+}

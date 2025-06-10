@@ -66,7 +66,6 @@
 
 /* Promotional Banner */
 .promo-banner {
-    /* background: url('https://via.placeholder.com/1400x300?text=Sale+Banner') no-repeat center/cover; */
     height: 300px;
     display: flex;
     align-items: center;
@@ -235,7 +234,7 @@ a{
         white-space: nowrap;
     }
 
-    .menu-left a {
+    .menu-left a, .menu-left p{
         font-size: 0.8rem;
     }
 
